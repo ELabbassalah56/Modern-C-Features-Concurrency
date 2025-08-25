@@ -82,3 +82,24 @@ int main()
     }
     return EXIT_SUCCESS;
 }
+
+
+/*
+What is a potential use for a thread's native_handle?
+
+The native_handle() method of std::thread gives you access to the underlying OS-specific thread handle (e.g., a pthread_t on POSIX systems, or a HANDLE on Windows).
+
+🔹 Potential uses:
+
+To call platform-specific APIs that aren’t exposed through the standard C++ thread interface.
+
+Examples:
+
+Changing the thread’s priority.
+
+Setting the thread’s CPU affinity (pinning a thread to specific cores).
+
+Naming the thread using OS-specific functions.
+
+Adjusting scheduling policies.
+*/
