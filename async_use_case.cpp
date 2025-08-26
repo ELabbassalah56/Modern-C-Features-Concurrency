@@ -1,3 +1,14 @@
+/*
+std::async supports different launch policies:
+• std::launch::async : The task is executed on a separate thread
+• std::launch::deferred : The task is executed when get() or wait() is called on the future
+• std::launch::async | std::launch::deferred : The implementation chooses (this is the default)
+Benefits of std::async :
+• Simple and concise way to run tasks asynchronously
+• Automatic thread management
+• Exception propagation from the task to the future
+• Flexible launch policies
+*/
 #include <future>
 #include <iostream>
 #include <chrono>
